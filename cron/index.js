@@ -5,7 +5,7 @@ const AnimeModel = require('../res/anime/anime.model');
 const GuildModel = require('../res/guild/guild.model');
 
 const initCronJob = (client) => {
-  const job = new CronJob('*/1 * * * *', () => {
+  const job = new CronJob('*/30 * * * *', () => {
     console.log('Cron triggered');
     const today = moment().utcOffset(8).day();
     const now = moment().utcOffset(8).format('HH:mm');
